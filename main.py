@@ -47,20 +47,3 @@ class BooksCollector:
     # получаем список Избранных книг
     def get_list_of_favorites_books(self):
         return self.favorites
-
-
-collector = BooksCollector()
-collector.add_new_book('Гордость и предубеждение и зомби')
-collector.set_book_rating("Три мушкетера", 3)
-print(collector.get_book_rating("Три мушкетера"))
-for i in range(1, 11):
-    print(i)
-
-book = 'Гордость и предубеждение и зомби'
-# обавляем новую книгу book в словарь
-collector.add_new_book(book)
-# добавляем book в список favorites
-collector.add_book_in_favorites(book)
-# удаляем книгу book из списка favorites
-collector.delete_book_from_favorites(book)
-print(collector.get_list_of_favorites_books())
